@@ -1,0 +1,10 @@
+(env
+ (_
+  (env-vars
+   (PPX_GETENV_CHECK 42))))
+
+(test
+ (name test_ppx_get_env)
+ (preprocess
+  (pps ppx_get_env_nuevo))
+ (libraries ounit2))
